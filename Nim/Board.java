@@ -161,7 +161,7 @@ public class Board
   }
 
   /*
-   * returns true if move is possible, and makes it.
+   * checks if move is possible and makes it.
    */
 
   public void makeMove(Move move)
@@ -200,8 +200,7 @@ public class Board
   }
 
   /*
-   * Calculates nim sum of current board configuration, returns true if the sum
-   * is 0
+   * Calculates nim sum of current board configuration, returns true if the sum is 0
    */
   public boolean nimSumEqualsZero()
   {
@@ -231,7 +230,7 @@ public class Board
   }
 
   /*
-   * Returns 0 --> No winner.
+   * Returns 0 --> No winner yet
    * Returns 1 --> Player wins.
    * Returns 2 --> Computer wins.
    */
