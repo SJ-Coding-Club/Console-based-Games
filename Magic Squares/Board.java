@@ -48,6 +48,8 @@ public class Board
 
   /*
    * Returns the index of the column to the right of a given column.
+   * If the column is on the right border, it returns the first one
+   * on the left.
    */
   public int getRight(int col)
   {
@@ -57,7 +59,8 @@ public class Board
   }
 
   /*
-   * Returns the index of the row above a given row.
+   * Returns the index of the row above a given row. If the row is at the top,
+   * it returns the bottom one.
    */
   public int getUp(int row)
   {
@@ -84,6 +87,7 @@ public class Board
 
   /*
    * Randomly generates the board the user sees based on selected difficulty.
+   * The user will have to make more guesses at higher difficulties.
    */
   public void generateUserBoard()
   {
@@ -130,8 +134,8 @@ public class Board
   }
 
   /*
-   * Returns the 'magic sum' of the square. This value is the sum of all
-   * straight lines that can be drawn across any three numbers in the square. In
+   * Returns the 'magic sum' of the square. This value is the sum of any
+   * straight line that can be drawn across three numbers in the square. In
    * a traditional Magic Square, this value is 15.
    */
   public int getMagicSum()
@@ -140,7 +144,7 @@ public class Board
   }
 
   /*
-   * checks if user's answers are right
+   * returns true if user's answers are right
    */
   public boolean validateBoard()
   {
@@ -158,7 +162,7 @@ public class Board
   }
 
   /*
-   * Displays the magic square to the user.
+   * Displays the current values of the magic square to the user.
    */
   public void showBoard()
   {
@@ -174,7 +178,7 @@ public class Board
   }
 
   /*
-   * copies content of 2d array from one into another
+   * copies content of one 2d array to another
    */
   public void copy2dArray(int[][] a, int[][] b)
   {
